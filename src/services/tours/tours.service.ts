@@ -16,7 +16,7 @@ export class ToursService {
             const tour = new TourDto('test'+i, 'test desc','test operator','300'+i);
             const tourData =   new this.tourModel(tour);
 // await
-             tourData.save();
+            await tourData.save();
         }
     }
     async deleteTours(): Promise<any>{
