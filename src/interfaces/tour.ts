@@ -1,11 +1,12 @@
 export interface ITour {
     name:string,
+    location: string,
     description:string,
     tourOperator:string,
-    price:string,
+    price: number,
+    date: string,
     img:string,
-    id:string,
     type: string,
-    date: string
-
+    id:string,
 }
+

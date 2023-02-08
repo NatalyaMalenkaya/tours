@@ -10,7 +10,7 @@ export class ToursController {
 
     // @UseGuards(JwtAuthGuard)
     @Post()
-    initTours(): Promise<ITour[]> {
+    initTechnics(): Promise<ITour[]> {
         this.toursService.generateTours();
         return  this.toursService.getAllTours();
     }
@@ -31,6 +31,6 @@ export class ToursController {
 
     @Delete()
     removeAllTours(): Promise<[]> {
-       return  this.toursService.deleteTours();
+       return  this.toursService.deleteTechnics();
     }
 }

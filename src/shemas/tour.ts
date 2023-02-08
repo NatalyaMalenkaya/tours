@@ -6,21 +6,17 @@ export type TourDocument = HydratedDocument<Tour>;
  
 @Schema()
 export class Tour implements ITour {
-    @Prop() name: string;
- 
-    @Prop() description: string;
- 
-    @Prop() tourOperator: string
- 
-    @Prop() price: string
- 
-    @Prop() img: string;
- 
-    @Prop() id: string;
- 
+    @Prop() name:string ;
+    @Prop() location:string ;
+    @Prop() description:string;
+    @Prop() tourOperator:string;
+    @Prop() price: string;
+    @Prop() date: string
+    @Prop() img:string;
     @Prop() type: string;
- 
-    @Prop() date: string;
+    @Prop() id:string;
+
+
 }
  
 export const TourSchema = SchemaFactory.createForClass(Tour);
