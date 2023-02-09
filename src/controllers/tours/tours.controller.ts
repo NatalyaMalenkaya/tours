@@ -11,7 +11,7 @@ export class ToursController {
     // @UseGuards(JwtAuthGuard)
     @Post()
     initTechnics(): Promise<ITour[]> {
-        this.toursService.generateTours();
+       // this.toursService.generateTours();
         return  this.toursService.getAllTours();
     }
 
