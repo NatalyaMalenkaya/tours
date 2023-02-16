@@ -31,6 +31,6 @@ export class ToursController {
 
     @Delete()
     removeAllTours(): Promise<[]> {
-       return  this.toursService.deleteTechnics();
+       return  this.toursService.deleteTours();
     }
 }
