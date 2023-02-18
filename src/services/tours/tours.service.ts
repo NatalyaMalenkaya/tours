@@ -11,14 +11,15 @@ export class ToursService {
     constructor( @InjectModel(Tour.name) private  tourModel: Model<TourDocument>) {
 
     }
-    async generateTours(): Promise<any> {
-        for ( let i=0; i<= this.toursCount; i++){
-            const tour = new TourDto('test'+i, 'test desc','test operator','300'+i);
-            const tourData =   new this.tourModel(tour);
-// await
-            await tourData.save();
+  async generateTours(): Promise<any> {
+       for ( let i=0; i<= this.toursCount; i++){
+           const tour = new TourDto('test'+i, 'test desc','test operator','300'+i);
+           const tourData =   new this.tourModel(tour);
+
+           await tourData.save();
         }
-    }
+    }    
+
     async deleteTours(): Promise<any>{
         return  this.tourModel.deleteMany({})
     }

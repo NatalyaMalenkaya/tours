@@ -8,5 +8,10 @@ export interface ITour {
     img:string,
     type: string,
     id:string,
+
+       
+
+
+
 }
 
