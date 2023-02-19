@@ -1,6 +1,6 @@
 export interface IOrder {
     age: string,
-    birthDay: string,
+    workingDay: string,
     cardNumber: string,
     tourId: string,
     userId: string,

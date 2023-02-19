@@ -3,15 +3,15 @@ import { IOrder } from "src/interfaces/order";
 
 export class OrderDto implements IOrder{
     age: string;
-    birthDay: string;
+    workingDay: string;
     cardNumber: string;
     tourId: string;
     userId: string;
     
 
-    constructor( age,birthDay,cardNumber,tourId, userId) {
+    constructor( age,workingDay,cardNumber,tourId, userId) {
         this.age = age ;
-        this.birthDay = birthDay ;
+        this.workingDay = workingDay ;
         this.cardNumber = cardNumber;
         this.tourId = tourId;
         this.userId = userId;

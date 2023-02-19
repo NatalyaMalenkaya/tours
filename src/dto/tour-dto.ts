@@ -2,8 +2,7 @@ import { ITour } from "src/interfaces/Tour";
 
 export class TourDto implements ITour {
     name: string;
-    description: string;
-    tourOperator: string;
+    tonnazh: string;
     price: number;
     img: string;
     id: string;
@@ -11,10 +10,15 @@ export class TourDto implements ITour {
     date: string;
     location: string;
 
-    constructor(name, description, tourOperator, price) {
-        this.name = name;
-        this.description = description;
-        this.tourOperator = tourOperator;
-        this.price = price;
+   
+    constructor( name,location,tonnazh,price,date,img,type) {
+        this.name=name;
+        this.location = location;
+        this.tonnazh = tonnazh;
+        this.price=price;
+        this.date = date;
+        this.img = img;
+        this.type = type;
     }
+    
 }

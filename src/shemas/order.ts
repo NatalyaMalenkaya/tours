@@ -8,7 +8,7 @@ export type OrderDocument = HydratedDocument<Order>;
 export class Order implements IOrder{
 
     @Prop() age:string ;
-    @Prop() birthDay:string;
+    @Prop() workingDay:string;
     @Prop() cardNumber:string;
     @Prop() tourId:string;
     @Prop() userId:string;

@@ -7,9 +7,10 @@ import { JwtModule } from '@nestjs/jwt';
 import { jwtConstants } from 'src/static/private/constanst';
 import { JwtStrategyService } from 'src/services/authentification/jwt-strategy/jwt-strategy.service';
 import { ToursService } from 'src/services/tours/tours.service';
+import { TourItemController } from '../tour-item/tour-item.controller';
 
 @Module({
-  controllers: [ToursController],
+  controllers: [ToursController, TourItemController],
   imports:  [MongooseModule.forFeature([{ name: Tour.name, schema: TourSchema }]),
     PassportModule,
 
