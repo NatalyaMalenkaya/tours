@@ -14,6 +14,8 @@ export class OrderController {
         const orderData = new OrderDto(data.age, data.workingDay, data.cardNumber, data.tourId, data.userId);
         this.orderService.sendOrder(orderData);
     }
+
+  
     
     @Get(":userId")
     getOrderById(@Param ("userId")userId): Promise <IOrder[]> {
