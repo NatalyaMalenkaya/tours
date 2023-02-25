@@ -23,6 +23,9 @@ export class OrderService {
        return this.orderModel.find(userId);
    }
 
+   async getOrderAll(): Promise<IOrder[]>{
+    return this.orderModel.find();
+}
 
 
 }

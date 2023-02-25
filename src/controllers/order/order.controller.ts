@@ -11,11 +11,11 @@ export class OrderController {
 
     @Post()
     initTechnics(@Body() data: OrderDto): void {
-        const orderData = new OrderDto(data.age, data.workingDay, data.cardNumber, data.tourId, data.userId);
+        const orderData = new OrderDto(data.firstName, data.cardNumber, data.workingTime, data.workingDay, data.workingLocation, data.tourId, data.userId);
         this.orderService.sendOrder(orderData);
     }
 
-  
+
     
     @Get(":userId")
     getOrderById(@Param ("userId")userId): Promise <IOrder[]> {

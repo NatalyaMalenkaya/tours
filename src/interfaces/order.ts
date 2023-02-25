@@ -1,8 +1,18 @@
 export interface IOrder {
-    age: string,
-    workingDay: string,
+    
+    
+    
+
+    firstName: string | null ,
     cardNumber: string,
-    tourId: string,
-    userId: string,
-    _id?: string
-}
+   // lastName: string | null,
+    workingTime: string | null,
+    workingDay: string | null,
+    workingLocation:string | null,
+    tourId: string | null,
+    userId: string | null,
+    //name: string | null ,
+   // price: number | null ,
+    //type:string | null ,
+    //tonnazh:string | null 
+}  

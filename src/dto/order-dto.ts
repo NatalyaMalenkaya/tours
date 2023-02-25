@@ -2,18 +2,38 @@ import { IOrder } from "src/interfaces/order";
 
 
 export class OrderDto implements IOrder{
-    age: string;
-    workingDay: string;
-    cardNumber: string;
-    tourId: string;
-    userId: string;
     
+    firstName: string | null ;
+    cardNumber: string;
+    workingTime: string | null;
+    workingDay: string | null;
+    workingLocation:string | null;
+    tourId: string | null;
+    userId: string | null;
+    
+    //lastName: string | null;
+    
+    
+  //  name: string | null ;
+   // price: number | null ;
+  //  type:string | null ;
+  //  tonnazh:string | null 
 
-    constructor( age,workingDay,cardNumber,tourId, userId) {
-        this.age = age ;
-        this.workingDay = workingDay ;
-        this.cardNumber = cardNumber;
-        this.tourId = tourId;
-        this.userId = userId;
-    }
-}
+
+    constructor( firstName, cardNumber, workingTime , workingDay, workingLocation, tourId, userId) {
+        this.firstName = firstName;
+        //this.lastName = lastName,
+        this.cardNumber = cardNumber,
+        this.workingTime = workingTime,
+        
+        this.workingDay = workingDay,
+        
+        this.workingLocation = workingLocation,
+        this.tourId = tourId,
+        this.userId = userId
+      //  this.name = name, 
+      //  this.price = price,
+      //  this.type = type,
+      //  this.tonnazh = this.tonnazh
+
+    }}

@@ -7,12 +7,21 @@ export type OrderDocument = HydratedDocument<Order>;
 @Schema()
 export class Order implements IOrder{
 
-    @Prop() age:string ;
-    @Prop() workingDay:string;
-    @Prop() cardNumber:string;
+  //  @Prop() name: string;
+   // @Prop() price: number;
+   // @Prop() type: string;
+  //  @Prop() tonnazh: string;
+    
+    
+    @Prop() firstName:string ;
+   // @Prop() lastName:string ;
+   @Prop() cardNumber:string;
+   @Prop() workingTime:string ;
+   @Prop() workingDay:string;
+   @Prop() workingLocation:string ;
     @Prop() tourId:string;
     @Prop() userId:string;
-    @Prop() _id: string
+    
 
 }
 
