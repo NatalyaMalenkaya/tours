@@ -2,7 +2,7 @@ import { IOrder } from "src/interfaces/order";
 
 
 export class OrderDto implements IOrder{
-    
+    techName: string | null ;
     firstName: string | null ;
     cardNumber: string;
     workingTime: string | null;
@@ -20,7 +20,8 @@ export class OrderDto implements IOrder{
   //  tonnazh:string | null 
 
 
-    constructor( firstName, cardNumber, workingTime , workingDay, workingLocation, tourId, userId) {
+    constructor( techName, firstName, cardNumber, workingTime , workingDay, workingLocation, tourId, userId) {
+        this.techName = techName;  
         this.firstName = firstName;
         //this.lastName = lastName,
         this.cardNumber = cardNumber,

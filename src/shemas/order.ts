@@ -12,7 +12,7 @@ export class Order implements IOrder{
    // @Prop() type: string;
   //  @Prop() tonnazh: string;
     
-    
+  @Prop() techName:string ;
     @Prop() firstName:string ;
    // @Prop() lastName:string ;
    @Prop() cardNumber:string;

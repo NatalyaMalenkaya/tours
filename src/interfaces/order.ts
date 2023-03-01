@@ -2,7 +2,7 @@ export interface IOrder {
     
     
     
-
+    techName: string | null ,
     firstName: string | null ,
     cardNumber: string,
    // lastName: string | null,

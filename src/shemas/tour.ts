@@ -10,6 +10,7 @@ export class Tour implements ITour {
     @Prop() location:string ;
     @Prop() tonnazh:string;
     @Prop() price: number;
+    @Prop() description: string;
     @Prop() date: string
     @Prop() img:string;
     @Prop() type: string;

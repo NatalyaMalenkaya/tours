@@ -4,6 +4,7 @@ export class TourDto implements ITour {
     name: string;
     tonnazh: string;
     price: number;
+    description: string;
     img: string;
     id: string;
     type: string;
@@ -11,10 +12,11 @@ export class TourDto implements ITour {
     location: string;
 
    
-    constructor( name,location,tonnazh,price,date,img,type) {
+    constructor( name,location,tonnazh,price,description,date,img,type) {
         this.name=name;
         this.location = location;
         this.tonnazh = tonnazh;
+        this.description = description;
         this.price=price;
         this.date = date;
         this.img = img;

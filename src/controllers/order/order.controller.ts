@@ -11,7 +11,7 @@ export class OrderController {
 
     @Post()
     initTechnics(@Body() data: OrderDto): void {
-        const orderData = new OrderDto(data.firstName, data.cardNumber, data.workingTime, data.workingDay, data.workingLocation, data.tourId, data.userId);
+        const orderData = new OrderDto(data.techName,data.firstName, data.cardNumber, data.workingTime, data.workingDay, data.workingLocation, data.tourId, data.userId);
         this.orderService.sendOrder(orderData);
     }
 

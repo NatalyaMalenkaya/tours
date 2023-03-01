@@ -22,7 +22,7 @@ export class ToursService {
     }
 
     async uploadTour(body: ITourClient){
-        const tour = new TourDto(body.name,body.location,body.tonnazh,body.price,body.date,body.img,body.type);
+        const tour = new TourDto(body.name,body.location,body.tonnazh,body.price,body.description,body.date,body.img,body.type);
         const tourData = new this.tourModel(tour);
         await tourData.save();
     }
