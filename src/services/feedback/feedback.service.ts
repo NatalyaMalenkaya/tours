@@ -16,4 +16,11 @@ export class FeedbackService {
     async getAllFeedback(): Promise<IFeedback[]>{
         return  this.feedbackModel.find()
    }
+
+   async  sendFeedback( data:FeedbackDto){
+    const feedbackData = new this.feedbackModel(data);
+    console.log('feedbackData', feedbackData);
+   await feedbackData.save();
+}
+
 }
