@@ -4,6 +4,6 @@ export interface IUser {
     psw: string,
     cardNumber?: string,
     newPsw?: string,
-    rptNewPsw?: string
+    repeatNewPsw?: string
 
 }
