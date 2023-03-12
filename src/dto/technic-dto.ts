@@ -1,6 +1,6 @@
-import { ITour } from "src/interfaces/Tour";
+import { ITechnic } from "src/interfaces/Technic";
 
-export class TourDto implements ITour {
+export class TourDto implements ITechnic {
     name: string;
     tonnazh: string;
     price: number;

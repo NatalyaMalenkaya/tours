@@ -8,7 +8,7 @@ export class OrderDto implements IOrder{
     workingTime: string | null;
     workingDay: string | null;
     workingLocation:string | null;
-    tourId: string | null;
+    technicId: string | null;
     userId: string | null;
     
     //lastName: string | null;
@@ -20,7 +20,7 @@ export class OrderDto implements IOrder{
   //  tonnazh:string | null 
 
 
-    constructor( techName, firstName, cardNumber, workingTime , workingDay, workingLocation, tourId, userId) {
+    constructor( techName, firstName, cardNumber, workingTime , workingDay, workingLocation, technicId, userId) {
         this.techName = techName;  
         this.firstName = firstName;
         //this.lastName = lastName,
@@ -30,7 +30,7 @@ export class OrderDto implements IOrder{
         this.workingDay = workingDay,
         
         this.workingLocation = workingLocation,
-        this.tourId = tourId,
+        this.technicId = technicId,
         this.userId = userId
       //  this.name = name, 
       //  this.price = price,

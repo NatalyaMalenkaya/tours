@@ -1,12 +1,12 @@
 import {Body, Controller, Get, Param, Post, UploadedFile, UseInterceptors} from '@nestjs/common';
-import {ITour, ITourClient} from "../../interfaces/tour";
-import {ToursService} from "../../services/tours/tours.service";
+import {ITechnic, ITourClient} from "../../interfaces/technic";
+import {ToursService} from "../../services/technics/technics.service";
 import {FileInterceptor} from "@nestjs/platform-express";
 import {diskStorage} from "multer";
 
-@Controller('tour-item')
+@Controller('technic-item')
 export class TourItemController {
-     constructor(private toursService: ToursService) {
+     constructor(private technicsService: ToursService) {
      }
      static imgName: string;
 
@@ -32,13 +32,13 @@ export class TourItemController {
     initTours(@Body() body: ITourClient): void {
         body.img = TourItemController.imgName;
 
-        this.toursService.uploadTour(body);
+        this.technicsService.uploadTour(body);
     }
 
 
     @Get(":name")
-    getTourById(@Param("name") name): Promise<ITour[]> {
-        return this.toursService.getToursByName(name);
+    getTourById(@Param("name") name): Promise<ITechnic[]> {
+        return this.technicsService.getToursByName(name);
     }
 
 

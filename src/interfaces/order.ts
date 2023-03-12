@@ -9,7 +9,7 @@ export interface IOrder {
     workingTime: string | null,
     workingDay: string | null,
     workingLocation:string | null,
-    tourId: string | null,
+    technicId: string | null,
     userId: string | null,
     //name: string | null ,
    // price: number | null ,

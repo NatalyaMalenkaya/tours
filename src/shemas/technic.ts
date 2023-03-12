@@ -1,11 +1,11 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { HydratedDocument } from 'mongoose';
-import {ITour} from "../interfaces/Tour";
+import {ITechnic} from "../interfaces/Technic";
  
-export type TourDocument = HydratedDocument<Tour>;
+export type TourDocument = HydratedDocument<Technic>;
  
 @Schema()
-export class Tour implements ITour {
+export class Technic implements ITechnic {
     @Prop() name:string ;
     @Prop() location:string ;
     @Prop() tonnazh:string;
@@ -19,4 +19,4 @@ export class Tour implements ITour {
 
 }
  
-export const TourSchema = SchemaFactory.createForClass(Tour);
+export const TourSchema = SchemaFactory.createForClass(Technic);

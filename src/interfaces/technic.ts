@@ -1,4 +1,4 @@
-export interface ITour {
+export interface ITechnic {
     name:string,
     location: string,
     tonnazh:string,

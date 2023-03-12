@@ -19,7 +19,7 @@ export class Order implements IOrder{
    @Prop() workingTime:string ;
    @Prop() workingDay:string;
    @Prop() workingLocation:string ;
-    @Prop() tourId:string;
+    @Prop() technicId:string;
     @Prop() userId:string;
     
 
