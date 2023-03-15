@@ -5,20 +5,16 @@ import { FeedbackService } from 'src/services/feedback/feedback.service';
 
 @Controller('feedback')
 export class FeedbackController {
-
-
     constructor( private feedbackService: FeedbackService) {}
     @Get()
     getAllFeedback(): Promise<IFeedback[]>  {
-               return this.feedbackService.getAllFeedback()
+    return this.feedbackService.getAllFeedback()
     }
-
     @Post()
     initFeedback(@Body() data: FeedbackDto): void {
     const feedbackData = new FeedbackDto(data.name, data.feedback);
-   console.log(feedbackData);
-       this.feedbackService.sendFeedback(feedbackData);
+    console.log(feedbackData);
+    this.feedbackService.sendFeedback(feedbackData);
     }
-
    }
   

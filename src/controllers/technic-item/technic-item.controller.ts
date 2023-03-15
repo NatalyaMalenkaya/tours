@@ -1,12 +1,12 @@
 import {Body, Controller, Get, Param, Post, UploadedFile, UseInterceptors} from '@nestjs/common';
-import {ITechnic, ITourClient} from "../../interfaces/technic";
-import {ToursService} from "../../services/technics/technics.service";
+import {ITechnic, ITechnicClient} from "../../interfaces/technic";
+import {TechnicsService} from "../../services/technics/technics.service";
 import {FileInterceptor} from "@nestjs/platform-express";
 import {diskStorage} from "multer";
 
 @Controller('technic-item')
-export class TourItemController {
-     constructor(private technicsService: ToursService) {
+export class TechnicItemController {
+     constructor(private technicsService: TechnicsService) {
      }
      static imgName: string;
 
@@ -24,21 +24,21 @@ export class TourItemController {
 
                 cb(null, imgName);
 
-                TourItemController.imgName = imgName;
+                TechnicItemController.imgName = imgName;
             }
         })
     })
     )
-    initTours(@Body() body: ITourClient): void {
-        body.img = TourItemController.imgName;
+    initTechnics(@Body() body: ITechnicClient): void {
+        body.img = TechnicItemController.imgName;
 
-        this.technicsService.uploadTour(body);
+        this.technicsService.uploadTechnic(body);
     }
 
 
     @Get(":name")
-    getTourById(@Param("name") name): Promise<ITechnic[]> {
-        return this.technicsService.getToursByName(name);
+    getTechnicById(@Param("name") name): Promise<ITechnic[]> {
+        return this.technicsService.getTechnicsByName(name);
     }
 
 

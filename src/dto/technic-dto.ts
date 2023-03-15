@@ -1,6 +1,6 @@
 import { ITechnic } from "src/interfaces/Technic";
 
-export class TourDto implements ITechnic {
+export class TechnicDto implements ITechnic {
     name: string;
     tonnazh: string;
     price: number;

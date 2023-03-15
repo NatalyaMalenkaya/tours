@@ -1,12 +1,12 @@
 import { Controller,Delete,Get, Param, Post, UseGuards } from '@nestjs/common';
-import { ToursService } from 'src/services/technics/technics.service';
+import { TechnicsService } from 'src/services/technics/technics.service';
 import { JwtAuthGuard } from 'src/services/authentification/jwt-auth.guard/jwt-auth.guard.service';
 import { ITechnic } from 'src/interfaces/Technic';
 
 @Controller('technics')
 export class ToursController {
 
-    constructor( private technicsService: ToursService) {}
+    constructor( private technicsService: TechnicsService) {}
 
     // @UseGuards(JwtAuthGuard)
     @Post()
@@ -24,8 +24,8 @@ export class ToursController {
     
     @UseGuards(JwtAuthGuard)
     @Get(":id")
-    getTourById(@Param ("id")id): Promise <ITechnic> {
-        return this.technicsService.getTourById(id);
+    getTechnicById(@Param ("id")id): Promise <ITechnic> {
+        return this.technicsService.getTechnicById(id);
     }
 
 

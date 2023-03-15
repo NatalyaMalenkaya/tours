@@ -15,7 +15,7 @@ export interface ITechnic {
 
 }
 
-export interface ITourClient {
+export interface ITechnicClient {
     name:string,
     location: string,
     tonnazh:string,
