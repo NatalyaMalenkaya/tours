@@ -10,13 +10,33 @@ export class OrderService {
 
     constructor(@InjectModel(Order.name) private orderModel: Model<OrderDocument>) {}
 
-
-    async  sendOrder( data:OrderDto): Promise<Order>{
+    async sendOrder(data: OrderDto): Promise<Order> {
         const orderData = new this.orderModel(data);
         return orderData.save();
     }
+    async getUsersOrders(userId: string): Promise<Order[]> {
+        if (userId==='all')
+            return this.orderModel.find();
+        return this.orderModel.find({userId: { "$regex": userId, "$options": "i" }})
+    }
+
+    async getOrder(orderId: string): Promise<IOrder> {
+        return this.orderModel.findById(orderId);
+    }
+
+   async getOrderAll(): Promise<IOrder[]>{
+    return this.orderModel.find();
+
+    
+}
+async getOrderById(userId: string): Promise<IOrder[]>{
+    return this.orderModel.find({"userId": userId});
+}
 
 
+}
+
+/*
    async getOrderById(userId): Promise<IOrder[]>{
        // const orders = this.orderModel.find(userId);
        // console.log(orders);
@@ -30,3 +50,4 @@ export class OrderService {
 
 }
 
+*/

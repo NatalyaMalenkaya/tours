@@ -11,6 +11,7 @@ export class OrderDto implements IOrder{
     technicId: string | null;
     userId: string | null;
     
+    
     //lastName: string | null;
     
     

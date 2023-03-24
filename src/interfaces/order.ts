@@ -11,6 +11,7 @@ export interface IOrder {
     workingLocation:string | null,
     technicId: string | null,
     userId: string | null,
+    _id?: string
     //name: string | null ,
    // price: number | null ,
     //type:string | null ,
